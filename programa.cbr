@@ -1,0 +1,181 @@
+// ============================================================
+// C-- / Cbr 1.0 ESTAVEL
+// Programa demonstrativo: recursos acumulados desde a versao 0.01
+// import e try/catch ficam para a Cbr 1.1.
+// ============================================================
+
+// 1. FUNCOES DEFINIDAS PELO PROGRAMADOR
+function dobro(valor) {
+    return valor * 2
+}
+
+function calcular_media(a, b, c) {
+    return (a + b + c) / 3
+}
+
+function calcular_pontos(base, bonus) {
+    return base * 10 + bonus
+}
+
+// 2. VARIAVEIS, TIPOS E ATRIBUICOES
+nome = "Freud"
+idade = 12
+altura = 1.39
+nota = 0.0
+estudante = true
+pontuacao = 0
+mensagem = "Bem-vindo ao Cbr!"
+
+// Reatribuicao
+pontuacao = 100
+pontuacao = pontuacao + 25
+
+// 3. ENTRADA DE DADOS COM scan()
+printf("\n=== CBR 1.0 ESTAVEL ===\n")
+scan("Digite seu nome: " {str.nome})
+scan("Digite sua idade: " {int.idade})
+scan("Digite sua nota (0 a 10): " {float.nota})
+
+// 4. OPERACOES ARITMETICAS E PRECEDENCIA
+soma = idade + 10
+subtracao = idade - 2
+multiplicacao = idade * 3
+divisao = idade / 2
+resto = idade % 2
+potencia_operador = 2 ** 3
+expressao = (idade + 5) * 2 - 4
+
+// 5. COMPARACOES E OPERADORES BOOLEANOS
+maior_de_idade = idade >= 18
+nota_valida = nota >= 0 && nota <= 10
+aprovado = nota >= 6 && nota_valida
+reprovado = nota < 6 || !nota_valida
+idade_diferente = idade != 18
+
+// 6. CHAMADAS DE FUNCOES
+idade_dobrada = dobro(idade)
+media_exemplo = calcular_media(7, 8, 9)
+pontos = calcular_pontos(idade, 5)
+
+// 7. MANIPULACAO DE STRINGS
+saudacao = juntar("Ola, ", nome)
+texto_completo = juntar(saudacao, "! Esta e a linguagem Cbr.")
+texto_maiusculo = maiusculas(texto_completo)
+texto_minusculo = minusculas(texto_completo)
+trecho = subtexto(texto_completo, 0, 8)
+texto_substituido = substituir(texto_completo, "Cbr", "C--")
+contem_nome = contem(texto_minusculo, "freud")
+tamanho_texto = tamanho(texto_completo)
+
+// 8. FUNCOES MATEMATICAS
+valor_raiz = raiz(81)
+valor_absoluto = absoluto(-15)
+valor_arredondado = arredondar(3.6)
+valor_piso = piso(3.9)
+valor_teto = teto(3.1)
+valor_seno = seno(0)
+valor_cosseno = cosseno(0)
+valor_tangente = tangente(0)
+valor_logaritmo = logaritmo(1)
+valor_log10 = log10(100)
+valor_exponencial = exponencial(1)
+valor_maximo = maximo(idade, 20)
+valor_minimo = minimo(idade, 20)
+valor_potencia = potencia(2, 5)
+valor_limitado = limitar(idade, 0, 18)
+
+// 9. ARRAYS HETEROGENEOS
+itens = [10, "Cbr", true, 3.14, -5]
+array_vazio = []
+itens[0] = 42
+adicionar(itens, "novo item")
+adicionar(itens, 99.5)
+remover(itens, 1)
+quantidade_itens = tamanho(itens)
+adicionar(array_vazio, "primeiro")
+adicionar(array_vazio, false)
+quantidade_vazio = tamanho(array_vazio)
+limpar(array_vazio)
+quantidade_depois_limpar = tamanho(array_vazio)
+
+// 10. CONDICIONAIS if / else
+if (aprovado) {
+    printf("\nSituacao: aprovado!\n")
+} else {
+    printf("\nSituacao: nao aprovado.\n")
+}
+
+if (idade >= 18) {
+    printf("Faixa etaria: adulto\n")
+} else {
+    printf("Faixa etaria: menor de idade\n")
+}
+
+// 11. SWITCH / CASE / DEFAULT
+switch (resto) {
+case 0:
+    printf("A idade informada e par.\n")
+    break
+case 1:
+    printf("A idade informada e impar.\n")
+    break
+default:
+    printf("Nao foi possivel verificar a paridade.\n")
+}
+
+// 12. WHILE, BREAK E CONTINUE
+contador = 0
+while (contador < 5) {
+    contador = contador + 1
+    if (contador == 2) {
+        continue
+    }
+    if (contador == 5) {
+        break
+    }
+    printf("While: {int.contador}\n")
+}
+
+// 13. FOR COM range(fim)
+printf("For range: ")
+for i in range(5) {
+    printf("{int.i} ")
+}
+printf("\n")
+
+// 14. FOR COM range(inicio, fim)
+printf("For range com inicio: ")
+for j in range(2, 6) {
+    printf("{int.j} ")
+}
+printf("\n")
+
+// 15. FOR CLASSICO
+printf("For classico: ")
+for (k = 0; k < 4; k = k + 1) {
+    printf("{int.k} ")
+}
+printf("\n")
+
+// 16. RELATORIO FINAL
+printf("\n=== RELATORIO GERAL ===\n")
+printf("Nome: {str.nome}\n")
+printf("Idade: {int.idade}; altura: {float.altura}\n")
+printf("Soma: {int.soma}; subtracao: {int.subtracao}; multiplicacao: {int.multiplicacao}; divisao: {int.divisao}; resto: {int.resto}\n")
+printf("2 elevado a 3: {int.potencia_operador}; expressao: {int.expressao}\n")
+printf("Idade dobrada: {float.idade_dobrada}; media: {float.media_exemplo}; pontos: {float.pontos}\n")
+printf("Texto: {str.texto_completo}\n")
+printf("Maiusculo: {str.texto_maiusculo}\n")
+printf("Minusculo: {str.texto_minusculo}\n")
+printf("Trecho: {str.trecho}\n")
+printf("Substituido: {str.texto_substituido}\n")
+printf("Contem nome: {bool.contem_nome}; tamanho: {int.tamanho_texto}\n")
+printf("Matematica: raiz={float.valor_raiz}, abs={float.valor_absoluto}, round={float.valor_arredondado}, piso={float.valor_piso}, teto={float.valor_teto}\n")
+printf("Trigonometria: seno={float.valor_seno}, cosseno={float.valor_cosseno}, tangente={float.valor_tangente}\n")
+printf("Log: ln={float.valor_logaritmo}, log10={float.valor_log10}, exp={float.valor_exponencial}\n")
+printf("Max={float.valor_maximo}, min={float.valor_minimo}, potencia={float.valor_potencia}, limitar={float.valor_limitado}\n")
+printf("Array: primeiro atual={int.itens[0]}; quantidade={int.quantidade_itens}\n")
+printf("Array vazio apos limpar: {int.quantidade_depois_limpar}\n")
+printf("Booleanos: estudante={bool.estudante}, maior_de_idade={bool.maior_de_idade}, nota_valida={bool.nota_valida}, aprovado={bool.aprovado}, reprovado={bool.reprovado}, idade_diferente={bool.idade_diferente}\n")
+printf("Mensagem inicial: {str.mensagem}; array antes de limpar: {int.quantidade_vazio}\n")
+printf("\nFim da demonstracao da Cbr 1.0!\n")

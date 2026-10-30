@@ -1,0 +1,21 @@
+function somar(a, b) {
+    return a + b
+}
+function calcular(a, b, c) {
+    return a * b + c
+}
+resultado = somar(10, 20)
+resultado2 = calcular(2, 3, 4)
+chave = 30
+switch (chave) {
+case 10:
+    printf("errado\n")
+    break
+case 30:
+    printf("soma=30\n")
+    break
+default:
+    printf("default\n")
+}
+printf("resultado={float.resultado}; calculo={float.resultado2}\n")
+end(0)

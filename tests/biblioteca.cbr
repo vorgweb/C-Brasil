@@ -1,0 +1,24 @@
+texto = "banana"
+parte = subtexto(texto, 1, 3)
+trocado = substituir(texto, "na", "X")
+existe = contem(texto, "ana")
+raizQ = raiz(81)
+absQ = absoluto(-5)
+redondo = arredondar(3.6)
+maior = maximo(10, 20)
+limitado = limitar(15, 0, 10)
+dados = [1, "oi", false]
+adicionar(dados, 3.5)
+remover(dados, 1)
+dados[0] = 99
+quantidade = tamanho(dados)
+vazio = []
+adicionar(vazio, "ok")
+tamanho_vazio = tamanho(vazio)
+printf("texto={str.parte}; troca={str.trocado}; contem={bool.existe}\n")
+printf("math={float.raizQ},{float.absQ},{float.redondo},{float.maior},{float.limitado}\n")
+printf("array={int.dados[0]},{float.dados[2]}; n={int.quantidade}; vazio={str.vazio[0]}; n2={int.tamanho_vazio}\n")
+limpar(dados)
+final = tamanho(dados)
+printf("limpo={int.final}\n")
+end(0)
